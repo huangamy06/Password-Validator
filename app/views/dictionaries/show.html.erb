@@ -1,8 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Words:</strong>
+  <strong>The Password you entered was: </strong>
+</p>
+<p>
   <%= @dictionary.words %>
+</p>
+<p>
+
+  <%=strength_comp(@dictionary.words)%>
 </p>
 
 <%= link_to 'Edit', edit_dictionary_path(@dictionary) %> |
