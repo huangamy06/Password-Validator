@@ -10,6 +10,21 @@
 
   <%=strength_comp(@dictionary.words)%>
 </p>
+<p>
+  <%=updatelen(@dictionary.words)%>
+</p>
+<p>
+  <%=updateL(@dictionary.words)%>
+</p>
+<p>
+  <%=updateU(@dictionary.words)%>
+</p>
+<p>
+  <%=updateN(@dictionary.words)%>
+</p>
+<p>
+  <%=updateS(@dictionary.words)%>
+</p>
 
 <%= link_to 'Edit', edit_dictionary_path(@dictionary) %> |
 <%= link_to 'Back', dictionaries_path %>
