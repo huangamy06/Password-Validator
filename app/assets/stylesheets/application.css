@@ -1,3 +1,68 @@
-body {
-  background-color: lightblue;
+.main {
+  background-color: white;
+  font-family: 'Arial';
+  color: black;
+}
+
+.card {
+  background-color: #2D8CFF;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  border-top: 400px;
+  align-content: center;
+  margin: auto;
+  width: 40%;
+  display: block;
+  text-align: center;
+}
+
+.card .new {
+  height: 150px;
+}
+
+.card .show {
+  height: 200px;
+}
+
+.list {
+  height: 400px;
+  width: 300px;
+  margin: auto;
+  width: 20%;
+  display: block;
+}
+
+.info {
+  text-align: center;
+}
+
+.header {
+  background-color: #2D8CFF;
+  color: white;
+  padding: 3px 10px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+input[type=text] {
+  border-radius: 15px;
+  height: 30px;
+  width: 400px;
+  size: 15px;
+  text-align: center;
+  align-content: center;
+}
+
+input[type=submit] {
+  border-radius: 15px;
+  margin-top: 10px;
+  height: 30px;
+  width: 100px;
+  size: 15px;
+  text-align: center;
+  align-content: center;
+}
+progress {
+  height: 50px;
 }

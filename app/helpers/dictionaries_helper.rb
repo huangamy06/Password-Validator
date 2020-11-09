@@ -51,7 +51,7 @@ module DictionariesHelper
 	def updateU(dictionary)
 		up=dictionary.count("A-Z")
 		if(up<1)
-			return "You need to have an Uppercase letter" 
+			return "You need to have an uppercase letter" 
 		end
 	end
 	def updateL(dictionary)
