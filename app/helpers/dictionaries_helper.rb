@@ -17,9 +17,9 @@ module DictionariesHelper
 			
 		end
 		if(upper==true and lower == true && number == true && symbol == true )
-			 return " This is a Strong Password"
+			 return "STRONG"
 		else 
-			return "This is a weak password"
+			return "WEAK"
 		end
 
 	end
@@ -31,14 +31,14 @@ module DictionariesHelper
 		sy=dictionary.count("!#$%&()*+,:;<=>?") *0.4
 		ttl=up+lo+nu+sy
 		#strings for printing out
-		strong="This is a strong password\n"
-		leng="the lenhgth is good\n"
+		strong="STRONG\n"
+		leng="The length is good\n"
 		
 		if(ttl>2.5 && dictionary.length>8)
 			return strong 
 
 		else
-			return "this is a weak password"
+			return "WEAK"
 		end
 
 	end
@@ -57,7 +57,7 @@ module DictionariesHelper
 	def updateL(dictionary)
 		lo=dictionary.count("a-z")
 		if(lo<1)
-			return "You need to have an Lowercase letter letter" 
+			return "You need to have an lowercase letter" 
 		end
 	end
 

@@ -28,7 +28,7 @@ class DictionariesController < ApplicationController
 
     respond_to do |format|
       if @dictionary.save
-        format.html { redirect_to @dictionary, notice: 'Dictionary was successfully created.' }
+        format.html { redirect_to @dictionary }
         format.json { render :show, status: :created, location: @dictionary }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class DictionariesController < ApplicationController
   def update
     respond_to do |format|
       if @dictionary.update(dictionary_params)
-        format.html { redirect_to @dictionary, notice: 'Dictionary was successfully updated.' }
+        format.html { redirect_to @dictionary }
         format.json { render :show, status: :ok, location: @dictionary }
       else
         format.html { render :edit }

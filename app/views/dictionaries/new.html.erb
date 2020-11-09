@@ -1,5 +1,81 @@
-<h1>New Dictionary</h1>
+<html>
+    <head>
+        <title>SSEA - Password Validator</title>
+        <style>
+            .main {
+                background-color: white;
+                font-family: 'Arial';
+                color: black;
+            }
 
-<%= render 'form', dictionary: @dictionary %>
+            .card {
+                background-color: #2D8CFF;
+                padding: 10px;
+                height: 150px;
+                width: 400px;
+                border-radius: 10px;
+                color: white;
+                border-top: 400px;
+                align-content: center;
+                margin: auto;
+                width: 40%;
+                display: block;
+                text-align: center;
+            }
 
-<%= link_to 'Back', dictionaries_path %>
+            .list {
+                height: 400px;
+                width: 300px;
+                margin: auto;
+                width: 20%;
+                display: block;
+            }
+
+            .info {
+                text-align: center;
+            }
+
+            .header {
+                background-color: #2D8CFF;
+                color: white;
+                padding: 3px 10px;
+                margin-bottom: 50px;
+                border-radius: 10px;
+            }
+
+            input {
+                border-radius: 15px;
+                height: 30px;
+                width: 400px;
+                size: 15px;
+                text-align: center;
+                align-content: center;
+            }
+        </style>
+    </head>
+    <body class="main">
+        <div>
+        <div class="header">
+            <h1>Password Validation Checker</h1>
+            <p>Amy Huang, Shakia Khan, Sara Miskus, Emily Robinson</p>
+        </div>
+        <div class="card">
+            <%= render 'form', dictionary: @dictionary %>
+        </div>
+        <p class="info">This application will check the strength of an employee's password. All passwords must adhere to these rules:</p>
+        <ul class="list">
+            <li>At least 8 characters long</li>
+            <li>Has at least one of the following:</li>
+            <ul>
+                <li>Uppercase letter</li>
+                <li>Lowercase letter</li>
+                <li>Symbol</li>
+                <li>Number</li>
+            </ul>
+            <li>Cannot be a known english word</li>
+            <li>No repeated characters more than twice</li>
+        </ul>
+        <div>
+    </body>
+</html>
+<%# <%= link_to 'Back', dictionaries_path %>
