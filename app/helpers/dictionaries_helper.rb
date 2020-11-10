@@ -23,7 +23,18 @@ module DictionariesHelper
 		end
 
 	end
+	def checkMultiples(dictionary)
+		count = 0
+		i=0
+		while i<(dictionary.length-2)
+			if(dictionary[i]==dictionary[i+1] and dictionary[i]==dictionary[i+2])
+				return false #found three in a row
+			end
+			i=i+1
+		end
+		return true
 
+	end
 	def strength_comp(dictionary)
 		up=dictionary.count("A-Z") * 4
 		lo=dictionary.count("a-z") * 3
@@ -34,15 +45,21 @@ module DictionariesHelper
 		#strings for printing out
 		strong="STRONG\n"
 		leng="The length is good\n"
-		ttl=ttl/10
-		if(ttl>=6.9 && dictionary.length>8)
+		ttl=ttl/10.0
+		#return ttl
+		if(ttl>=6.9 && dictionary.length>8 &&checkMultiples(dictionary))
 			return "STRONG" 
+
+		elsif (ttl>=4.0 && dictionary.length>8&&checkMultiples(dictionary))
+			
+			return "MODERATE"
 
 		else
 			return "WEAK"
 		end
 
 	end
+
 	def updatelen(dictionary)
 		
 		if(dictionary.length<8)
@@ -73,6 +90,12 @@ module DictionariesHelper
 		sy=dictionary.count("!#$%&()*+,:;<=>?")
 		if(sy<1)
 			return "You need to have a symbol" 
+		end
+	end
+	def updateMult(dictionary)
+		
+		if(!checkMultiples(dictionary))
+			return "You cannot have three of the same character in a row" 
 		end
 	end
 

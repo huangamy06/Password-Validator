@@ -2,7 +2,7 @@
 
 <h1>Passwords</h1>
 <p>How it works/ needs to be done. THis will need to be removed. I think that we should get rid of the index page. Maybe update the algorithm. If we can get the messages to appear on the same page as when they enter a new item that would be great. It needs to look prettier. The code for checking the password is under dictionaries_helper.rb. It works by pressing new dictionary and then entering a password then press submit and it takes you to a screen and tells you if it is strong or weak and if you need to add anything.</p>
-
+<p>We also need to update the algorithm to check if an english word and characters more than two characters in a row</p>
 <table>
   <thead>
     <tr>
@@ -16,6 +16,7 @@
       <tr>
         <td><%= dictionary.words %></td>
        <td><%= strength_comp(dictionary.words) %></td>
+       <td><%= checkMultiples(dictionary.words) %></td>
         <td><%= link_to 'Show', dictionary %></td>
         <td><%= link_to 'Edit', edit_dictionary_path(dictionary) %></td>
         <td><%= link_to 'Destroy', dictionary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
