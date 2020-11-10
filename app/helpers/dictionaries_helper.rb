@@ -25,17 +25,18 @@ module DictionariesHelper
 	end
 
 	def strength_comp(dictionary)
-		up=dictionary.count("A-Z") *0.2
-		lo=dictionary.count("a-z") * 0.1
-		nu=dictionary.count("0-9") *0.3
-		sy=dictionary.count("!#$%&()*+,:;<=>?") *0.4
-		ttl=up+lo+nu+sy
+		up=dictionary.count("A-Z") * 4
+		lo=dictionary.count("a-z") * 3
+		nu=dictionary.count("0-9") * 5
+		sy=dictionary.count("!#$%&()*+,:;<=>?") * 6
+		len = dictionary.length / 2
+		ttl=up+lo+nu+sy+len
 		#strings for printing out
 		strong="STRONG\n"
 		leng="The length is good\n"
-		
-		if(ttl>2.5 && dictionary.length>8)
-			return strong 
+		ttl=ttl/10
+		if(ttl>=6.9 && dictionary.length>8)
+			return "STRONG" 
 
 		else
 			return "WEAK"
