@@ -65,4 +65,5 @@ input[type=submit] {
 }
 progress {
   height: 50px;
+  margin-top: 0px;
 }
