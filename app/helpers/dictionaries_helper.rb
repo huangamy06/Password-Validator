@@ -60,6 +60,22 @@ module DictionariesHelper
 
 	end
 
+	def strength_num(dictionary)
+		up=dictionary.count("A-Z") * 4
+		lo=dictionary.count("a-z") * 3
+		nu=dictionary.count("0-9") * 5
+		sy=dictionary.count("!#$%&()*+,:;<=>?") * 6
+		len = dictionary.length / 2
+		ttl=up+lo+nu+sy+len
+		#strings for printing out
+		strong="STRONG\n"
+		leng="The length is good\n"
+		ttl=ttl/10.0
+		return ttl
+		
+
+	end
+
 	def updatelen(dictionary)
 		
 		if(dictionary.length<8)

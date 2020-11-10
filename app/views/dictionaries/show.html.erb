@@ -17,7 +17,10 @@
             <progress id="password-strength" value="8" max="10"></progress>         
         </div>
         <div class="info">
-          <p>
+             <p>
+             <%=strength_num(@dictionary.words)%>
+            </p>
+            <p>
              <%=updatelen(@dictionary.words)%>
             </p>
             <p>
