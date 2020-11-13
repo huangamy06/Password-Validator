@@ -14,11 +14,12 @@
             <p>
               <strong>The password you entered was: </strong> <%=strength_comp(@dictionary.words)%>
             </p>   
-            <progress id="password-strength" value="8" max="10"></progress>         
+            <p>Strength of Password: </p>
+            <progress id="password-strength" value=<%=strength_num(@dictionary.words)%> max="10"><%=strength_num(@dictionary.words)%> %</progress>         
         </div>
         <div class="info">
              <p>
-             <%=strength_num(@dictionary.words)%>
+              <%=strength_num(@dictionary.words)%>
             </p>
             <p>
              <%=updatelen(@dictionary.words)%>
