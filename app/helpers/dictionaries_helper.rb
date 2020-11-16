@@ -1,3 +1,4 @@
+#Emily Robinson worked on this
 module DictionariesHelper
 
 	def read_dictionary()
@@ -63,10 +64,10 @@ module DictionariesHelper
 		leng="The length is good\n"
 		ttl=ttl/10.0
 		#return ttl
-		if(ttl>=6.9 && dictionary.length>8 &&checkMultiples(dictionary) && !checkEnglish(dictionary))
+		if(ttl>=6.9 && dictionary.length>8 &&checkMultiples(dictionary)&& !checkEnglish(dictionary) &&up>=1&&lo>=1&&nu>=1&&sy>=1)
 			return "STRONG" 
 
-		elsif (ttl>=4.0 && dictionary.length>8&&checkMultiples(dictionary))
+		elsif (ttl>=4.0 && dictionary.length>8&&checkMultiples(dictionary)&&up>=1&&lo>=1&&nu>=1&&sy>=1)
 			
 			return "MODERATE"
 
